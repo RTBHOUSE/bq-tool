@@ -31,6 +31,11 @@
             <version>${avro.version}</version>
             <classifier>hadoop2</classifier>
         </dependency>
+        <dependency>
+            <groupId>org.apache.crunch</groupId>
+            <artifactId>crunch-core</artifactId>
+            <version>${crunch.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -67,5 +72,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <hadoop.version>2.5.0</hadoop.version>
         <avro.version>1.7.7</avro.version>
+        <crunch.version>0.11.0-hadoop2</crunch.version>
     </properties>
 </project>
