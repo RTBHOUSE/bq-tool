@@ -26,6 +26,8 @@ public class SchemaConverter {
 
     private static final String TINTEGER = "INTEGER";
 
+    private static final String TBYTES = "BYTES";
+
     private static final String TNULLABLE = "NULLABLE";
 
     private static final String TBOOLEAN = "BOOLEAN";
@@ -121,6 +123,8 @@ public class SchemaConverter {
             return TSTRING;
         } else if (type.equals(Schema.Type.RECORD)) {
             return TRECORD;
+        } else if (type.equals(Schema.Type.BYTES)) {
+            return TBYTES;
         } else if (type.equals(Schema.Type.UNION)) {
             for (Schema childSchema : schema.getTypes()) {
                 if (!childSchema.getType().equals(Schema.Type.NULL)) {
